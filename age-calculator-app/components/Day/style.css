@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .day-container {
+        @apply flex flex-row items-start gap-4 self-stretch;
+    }
+
+    .day-title {
+        @apply font-poppins font-extrabold lowercase italic leading-[110%] tracking-[-2.08px] text-off-black drop-shadow-text-shadow sm:text-[56px] md:text-[70px] lg:text-[104px] xsm:text-[45px];
+        -webkit-text-stroke-color: #000;
+        -webkit-text-stroke-width: 1;
+    }
+    .day-span {
+        @apply text-purple;
+    }
+}

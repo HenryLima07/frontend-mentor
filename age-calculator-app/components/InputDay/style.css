@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .container {
+        @apply flex  max-w-44 flex-[1_0_0] flex-col items-start gap-4 sm:gap-1; /*max-w-44 sm:w-auto*/
+    }
+
+    .input-label {
+        /**/
+        @apply font-poppins text-[14px] font-semi-bold uppercase not-italic leading-normal tracking-[3.5px]  sm:text-[12px] sm:tracking-[3px];
+    }
+
+    .input-date {
+        @apply flex w-full items-center self-stretch rounded-lg border border-solid px-6 py-3
+        font-poppins text-input font-bold leading-normal tracking-[0.32px] outline-none 
+        focus:border-purple
+        sm:gap-4 sm:px-4 sm:py-3 sm:text-[20px] sm:tracking-[0.2px];
+    }
+
+    .error {
+        @apply text-light-red;
+    }
+    .error-txt {
+        @apply text-[14px] font-normal italic;
+    }
+}

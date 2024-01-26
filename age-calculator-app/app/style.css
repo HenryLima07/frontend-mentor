@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .main {
+        @apply flex min-h-screen w-full flex-col items-center justify-center bg-light-grey sm:px-4 sm:pb-[238px] sm:pt-[88px];
+    }
+
+    .inputs-row {
+        @apply flex items-start gap-8 self-stretch;
+    }
+
+    .result-col {
+        @apply flex flex-col items-start;
+    }
+    .send-btn {
+        @apply flex h-24 w-24 items-center justify-center gap-2 bg-purple;
+    }
+
+    .icon-btn-container {
+        @apply relative flex h-24 flex-row items-center self-stretch sm:h-16;
+    }
+
+    .line-btn {
+        @apply h-[1px] w-full items-stretch text-light-grey;
+    }
+    .send-btn {
+        @apply absolute left-[90%] flex h-24 w-24 items-center justify-center gap-2 rounded-full bg-purple hover:bg-off-black sm:left-[40%] sm:h-16 sm:w-16;
+    }
+    .icon {
+        @apply flex h-11 w-11;
+    }
+}

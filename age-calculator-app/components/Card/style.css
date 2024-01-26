@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .card {
+        @apply flex min-w-[350px] max-w-[840px] flex-col items-start rounded-3xl rounded-br-[200px] bg-white p-14  sm:min-w-[185px] sm:max-w-[343px] sm:gap-8 sm:rounded-br-[100px] sm:px-6 sm:py-12;
+    }
+}
