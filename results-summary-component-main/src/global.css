@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url('../assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+@layer components {
+    body {
+        @apply flex min-h-screen w-full flex-col bg-pale-blue font-hankengrotesk md:items-center md:justify-center;
+    }
+
+    .main-card {
+        @apply flex min-h-screen w-full min-w-[250px] flex-col bg-white md:min-h-[512px] md:max-w-[736px] md:flex-row md:rounded-big-radius-card md:shadow-card-shadow;
+    }
+
+    .score-card {
+        @apply flex max-h-[512px] min-h-[356px] flex-shrink-0 flex-col items-center justify-between rounded-small-radius-card p-6 text-center text-white shadow-card-shadow md:max-w-[368px] md:justify-around md:rounded-big-radius-card;
+        background: var(
+            --Gradient-1,
+            linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%)
+        );
+        font-feature-settings:
+            'clig' off,
+            'liga' off;
+    }
+    .title-result {
+        @apply text-lg font-bold leading-normal text-[#CAC9FF] md:text-2xl;
+    }
+    .score-container {
+        @apply flex min-h-[140px] min-w-[140px] flex-shrink-0 flex-col justify-center rounded-full leading-normal md:min-h-[200px] md:min-w-[200px];
+        background: var(
+            --Gradient-2,
+            linear-gradient(
+                180deg,
+                #4d21c9 0%,
+                rgba(37, 33, 201, 0) 100%,
+                rgba(37, 33, 201, 0) 100%
+            )
+        );
+    }
+    .main-score {
+        @apply text-[56px] font-extrabold leading-[72px] md:text-7xl;
+    }
+    .score {
+        @apply text-base font-semibold  opacity-[0.5168];
+    }
+    .subtitle-result {
+        @apply text-2xl text-[32px] font-bold;
+    }
+    .sub-text-result {
+        @apply my-4 px-10 md:my-0 md:px-[38px] md:text-lg;
+    }
+    .summary-score {
+        @apply rounded-big-right-radius-card flex flex-col items-center px-8 py-9 text-base font-medium leading-normal md:pb-0;
+        font-feature-settings:
+            'clig' off,
+            'liga' off;
+    }
+
+    .title {
+        @apply w-full px-5 py-6 text-lg font-bold text-dark-gray-blue md:px-2 md:py-0 md:text-2xl;
+    }
+    .list {
+        @apply flex w-full flex-col gap-6 px-3 md:ml-2 md:mt-5 md:gap-3;
+    }
+    .row-score {
+        @apply flex min-h-[46px] min-w-[200px] flex-row items-center justify-between rounded-xl px-3 py-3 md:min-w-[284px] md:py-4;
+    }
+    .specific-score {
+        @apply pr-2 text-base font-bold text-[#303B59] md:text-lg;
+    }
+
+    .score-of {
+        @apply pl-1 opacity-50;
+    }
+
+    .btn-container {
+        @apply my-7 min-h-14 w-full  min-w-[250px] max-w-72 shrink-0 rounded-[2rem] bg-dark-gray-blue text-lg font-bold leading-normal text-white md:mt-11;
+    }
+    .btn-container:hover {
+        background: var(
+            --Gradient-1,
+            linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%)
+        );
+    }
+
+    .row-score.red {
+        background: var(
+            --red-95-white,
+            linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.95) 0%,
+                rgba(255, 255, 255, 0.95) 100%
+            ),
+            #f55
+        );
+    }
+
+    .row-score.yellow {
+        background: var(
+            --yellow-95-white,
+            linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.95) 0%,
+                rgba(255, 255, 255, 0.95) 100%
+            ),
+            #ffb21e
+        );
+    }
+
+    .row-score.green {
+        background: var(
+            --green-95-white,
+            linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.95) 0%,
+                rgba(255, 255, 255, 0.95) 100%
+            ),
+            #00bb8f
+        );
+    }
+
+    .row-score.blue {
+        background: var(
+            --blue-95-white,
+            linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.95) 0%,
+                rgba(255, 255, 255, 0.95) 100%
+            ),
+            #1125d6
+        );
+    }
+    .sub-score {
+        @apply flex flex-row items-center gap-4 md:gap-3 md:text-lg;
+    }
+    .sub-score.red {
+        @apply text-light-red;
+    }
+    .sub-score.yellow {
+        @apply text-orangey-yellow;
+    }
+    .sub-score.green {
+        @apply text-green-teal;
+    }
+    .sub-score.blue {
+        @apply text-cobalt-blue;
+    }
+
+    .attribution {
+        @apply fixed bottom-0;
+    }
+}
