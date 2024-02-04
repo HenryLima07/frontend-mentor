@@ -4,15 +4,11 @@ import Image from 'next/image'
 import DayComponent from '@/components/Day/Day.component'
 import InputDay from '@/components/InputDay/InputDay.component'
 import CardComponent from '@/components/Card/Card.component'
-import { useEffect, useState } from 'react'
-import { act } from 'react-dom/test-utils'
-import moment from 'moment'
 import './style.css'
 
 import IconArrow from '/public/assets/images/icon-arrow.svg'
 
 import dateCalculator from '@/hooks/date-calculator.hook'
-import { ErrorBoundaryHandler } from 'next/dist/client/components/error-boundary'
 
 export default function Home() {
     const {
@@ -74,21 +70,25 @@ export default function Home() {
                 </div>
                 <div className="icon-btn-container">
                     <hr className="line-btn" />
-                    <button className="send-btn" onClick={onSend}>
+                    <button
+                        className="send-btn"
+                        aria-label="Send date"
+                        onClick={onSend}
+                    >
                         <IconArrow className="icon" />
                     </button>
                 </div>
                 <div className="result-col">
                     <DayComponent
-                        date={year > 0 ? year.toString() : '--'}
+                        date={year > 0 ? year.toString() : '- -'}
                         text="YEAR"
                     />
                     <DayComponent
-                        date={month > 0 ? month.toString() : '--'}
+                        date={month > 0 ? month.toString() : '- -'}
                         text="MONTH"
                     />
                     <DayComponent
-                        date={day > 0 ? day.toString() : '--'}
+                        date={day > 0 ? day.toString() : '- -'}
                         text="DAY"
                     />
                 </div>

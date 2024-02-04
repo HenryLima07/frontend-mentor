@@ -4,7 +4,7 @@
 
 @layer components {
     .container {
-        @apply flex  max-w-44 flex-[1_0_0] flex-col items-start gap-4 sm:gap-1; /*max-w-44 sm:w-auto*/
+        @apply flex  max-w-40 flex-[1_0_0] flex-col items-start gap-4 sm:gap-1; /*max-w-44 sm:w-auto*/
     }
 
     .input-label {

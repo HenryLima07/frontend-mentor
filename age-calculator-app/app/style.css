@@ -4,7 +4,7 @@
 
 @layer components {
     .main {
-        @apply flex min-h-screen w-full flex-col items-center justify-center bg-light-grey sm:px-4 sm:pb-[238px] sm:pt-[88px];
+        @apply flex min-h-screen w-full flex-col items-center justify-center bg-off-white sm:px-4 sm:pb-[238px] sm:pt-[88px];
     }
 
     .inputs-row {
